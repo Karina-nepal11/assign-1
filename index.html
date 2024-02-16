@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Header Section-->
+    <div class="header_main">
+        <header>
+            <div class="container">
+                <img src="half pizza.png" alt="Yummy Pizza" class="half pizza.png">
+                </div>
+                <div subclass="container">
+                <p>
+                    <h1>Welcome To Pizza's World</h1>
+                    </p>
+            </div>
+        </header>
+    </div>
+
+
+        <!--Main Content Section--> 
+        <main>
+            <!--Pizza Order Form-->
+            <form action="Submit_order.php" method="post">
+                <fieldset>
+                    <legend> Your Pizza Order</legend>
+                <!--Number of pizzas-->
+                <label for="num_pizzas"> Number of Pizzas:</label>
+                <input type="number" id="num_pizzas" placeholder="Enter no of pizza you want" name="num_pizzas" min="1" required><br>
+
+                <!--Size-->
+                <label for="Size">Size:</label>
+                <select id="Size" name="Size" required>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select><br>
+
+                <!--Shape-->
+                <label>Shape:</label><br>
+                <input type="radio" id="Round" name="Shape" value="Round" checked>
+                <label for="Round">Round</label><br>
+                <input type="radio" id="Square" name="Shape" value="Square">
+                <label for="Square">Square</label><br>
+
+                <!-- Toppings-->
+                <label for="Toppings">Toppings:</label><br>
+                <input type="checkbox" id="Mushrooms" name="Toppings[]" value="Mushrooms">
+                <label for="Mushrooms">Mushrooms</label><br>
+                <input type="checkbox" id="Pepperoni" name="Toppings[]" value="Pepperoni">
+                <label for="Pepperoni">Pepperoni</label><br>
+                <input type="checkbox" id="Extra cheese" name="Toppings[]" value="Extra cheese">
+                <label for="Extra cheese">Extra Cheese</label><br>
+
+                <!-- Crust Type-->
+                <label for="Crust">Crust Type:</label>
+                <select id="Crust" name="Crust" required>
+                    <option value="Deep-dish">Deep Dish</option>
+                    <option value="Thin-crust"> Thin Crust</option>
+                    <option value="Regular"> Regular</option>
+                </select><br>
+
+                <!--Delivery Option-->
+                <label> Delivery Option:</label><br>
+            <input type="radio" id="Takeout" name="Delivery" value="Takeout" checked>
+            <label for="Takeout"> TakeOut</label><br>
+            <input type="radio" id="Delivery" name="Delivery" value="Delivery">
+            <label for="Delivery">Delivery</label><br>
+            <input type="radio" id="Eat-in" name="Delivery" value="Eat-in">
+            <label for="Eat-in">Eat-in</label><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text"id="name"name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email"id="email"name="email"required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone"name="phone" required><br>
+
+            <!-- Additional Comments-->
+            <label for="Comments">Additional Comments:</label><br>
+            <textarea id="Comments" name="Comments" rows="4" cols="50"></textarea><br>
+
+            <!--Submit Button-->
+            <input type="submit" value="Place order">
+            <input type="reset" value="Reset">
+                        </fieldset>
+            </form>
+            <main>
+
+                <!--Footer Section-->
+                <footer>
+                    <p> Contact us at:<a href="tel:+1234567899">1234567899</a></p>
+
+                </footer>
+
+            
+            </main>
+
+
+
+    
+</body>
+</html>
